@@ -106,4 +106,9 @@ Further features coming soon
 1) Add Title feature
 2) Mark your note as important
 3) delete all option
+<<<<<<< HEAD:notes_website.js
 */
+=======
+
+*/
+>>>>>>> cbb220ce409741896c95184edde9430a90dec837:index.js
