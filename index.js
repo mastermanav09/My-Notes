@@ -1,4 +1,3 @@
-
 shownotes();
 
 // add the note contents to local storage
@@ -49,22 +48,24 @@ function shownotes() {
     if (notesobj.length != 0) {
         noteselem.innerHTML = html;
     } else {
-        noteselem.innerHTML = `<section id="pre1">Nothing to show! Use <a id="emptynote_span" >'Add your note here'</a> section to add notes.</section>`;
+        noteselem.innerHTML = `<div id="add_notes__ind">Nothing to show! Use <a id="logo1">'Add your note here'</a> section to add notes.</div>`;
     }
 }
 
-//To highlighten
-let emptynote_span = document.getElementById('emptynote_span');
-let add_notecard = document.querySelector('.add_notecard');
+// //To highlighten
+// let logo = document.getElementById('logo1');
+// let add_notecard = document.getElementById('notebox');
 
-emptynote_span.addEventListener('click', function () {
-    add_notecard.style = "box-shadow: 5px 5px 15px purple;"
+// logo.addEventListener('click', function () {
+//     add_notecard.style = "box-shadow: 5px 5px 15px purple;"
 
-})
+//     logo.addEventListener('mouseleave', function () {
+//         add_notecard.style = "box-shadow:none;"
+//     })
 
-emptynote_span.addEventListener('mouseleave', function () {
-    add_notecard.style = "box-shadow:none;"
-})
+// })
+
+
 
 // function to delete a note
 function deletenote(index) {
@@ -106,9 +107,4 @@ Further features coming soon
 1) Add Title feature
 2) Mark your note as important
 3) delete all option
-<<<<<<< HEAD:notes_website.js
 */
-=======
-
-*/
->>>>>>> cbb220ce409741896c95184edde9430a90dec837:index.js
