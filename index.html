@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>My Notes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
+  <style type="text/css">
+  
+    .navbar-brand {
+      font-size: 1.55rem;
+    }
+
+    .navbar {
+      background-color: darkviolet;
+    }
+
+    .fonc {
+      color: white;
+    }
+
+    .navbar-toggler,
+    .navbar-toggler-icon {
+      border-color: white;
+      background-image: url("https://www.clipartmax.com/png/small/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png");
+    }
+
+    .add_notecard {
+      width: 80%;
+    }
+
+    #add_btn {
+      background-color: purple;
+      border-color: purple;
+    }
+
+    .del_note {
+      background-color: darkviolet;
+      margin: 0rem;
+      cursor: pointer;
+      border-color: darkviolet;
+      border-radius: 1.5rem;
+    }
+
+    #add_btn:hover,
+    .del_note:hover {
+      background-color: darkviolet;
+    }
+
+    #add_btn::selection,
+    #add_btn:focus,
+    .del_note:focus {
+      background-color: darkviolet;
+    }
+    
+    .del_note:hover
+    {
+      transform: translateY(-0.2rem);
+      box-shadow: 0px 15px 20px rgba(146, 38, 218, 0.4);
+    }
+
+    .card-title {
+      color: purple;
+    }
+
+    .notecard {
+      padding: 0.5rem;
+    }
+    
+    #pre1
+    {
+       font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #emptynote_span
+    {
+      font-weight: bold;
+      text-decoration: none;
+      color: blueviolet;
+      cursor: pointer;
+    }
+    
+    #footer
+    {
+      height: 4.2rem;
+      background-color: darkviolet;
+      transform-origin: 50% 100%;
+      transform: scaleY(0.75);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    #instalink
+    {
+      text-decoration: none;
+      color: white;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand mb-sm-1 fonc" href="#">My Notes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mb-sm-2 ml-sm-1 mb-lg-0">
+            <a class="nav-link active fonc" href="#">Home</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control mr-2" id="search_txt" type="search" placeholder="Search Notes" aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container my-3">
+    <h2 align="center">Welcome to <span class=" bg-dark py-1 px-2 text-white">My Notes</span></h2>
+
+    <div align="center">
+      <div class="card add_notecard my-4">
+
+        <div class="card-body">
+          <h4 class="card-title">Add your note here :</h4>
+          <div class="mb-3">
+            <textarea class="form-control" id="AddTextarea1" rows="3"></textarea>
+          </div>
+          <button href="#" class="btn btn-primary" id="add_btn">Add this Note</button>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <i>
+      <h3>Your Notes : </h3>
+    </i>
+
+    <hr>
+
+    <div class="container-fluid row m-4" id="notes">
+
+      <div class="card col-lg-3 m-3 notecard" style="width: 17rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary del_note">Delete note</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer id="footer">Designed by <a id="instalink" href="https://www.instagram.com/_master.manav_/" target="_blank">Master Manav</a></footer>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+    integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="notes_website.js"></script>
+</body>
+
+</html>
