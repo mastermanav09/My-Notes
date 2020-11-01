@@ -94,7 +94,7 @@ search.addEventListener("input", function () {
     let notecards = document.getElementsByClassName("notecard");
     Array.from(notecards).forEach(function (element) {
         let cardtext = element.getElementsByTagName("p")[0].innerText;
-        if (cardtext.includes(inputVal)) {
+        if (cardtext.toLowerCase().includes(inputVal)) {
             element.style.display = "block";
         } else {
             element.style.display = "none";
