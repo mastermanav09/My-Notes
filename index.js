@@ -3,6 +3,7 @@ shownotes();
 // add the note contents to local storage
 
 let addbtn = document.getElementById("add_btn");
+let footer = document.getElementById('footer')
 
 addbtn.addEventListener("click", function (e) {
     let addtext = document.getElementById("AddTextarea1");
@@ -52,12 +53,10 @@ function shownotes() {
         
 
     } else {
-        noteselem.innerHTML = `<div id="add_notes__ind">Nothing to show! Use <a id="logo1">'Add your note here'</a> section to add notes.</div>`;
+        noteselem.innerHTML = `<div id="add_notes__ind">Nothing to show! Use <a id="logo1" >'Add your note here'</a> section to add notes.</div>`;
 
         foot = document.getElementById('footer')
     }
-    
-
 
 }
 
@@ -109,7 +108,6 @@ search.addEventListener("input", function () {
             element.style.display = "block";
         } else {
             element.style.display = "none";
-
         }
 
     });

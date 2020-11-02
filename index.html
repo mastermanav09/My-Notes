@@ -78,44 +78,47 @@
 
     #add_notes__ind {
       font-size: 2rem;
-      margin-top: 1rem;
       color: rgb(13, 174, 238);
     }
 
     #footer {
-      height: 4.45rem;
+      height: 3.4rem;
       background-color: darkviolet;
-      transform-origin: 50% 100%;
-      transform: scaleY(0.8);
       color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      transform-origin: 50% 100%;
+      
+
     }
 
     #instalink {
       text-decoration: none;
       color: white;
       margin-left: 0.5rem;
+
+    }
+
+    html,
+    body {
+      position: relative;
+      overflow: auto;
     }
 
     body {
       background-size: 100% 100%;
       background-attachment: fixed;
     }
-    
-    #content {
-      position: relative;
-      min-height: 100vh;
-    }
   </style>
 </head>
 
 <body
   background="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80">
+
   <div id="content">
 
     <nav class="navbar navbar-expand-md">
@@ -182,8 +185,7 @@
 
   </div>
 
-  <footer id="footer">Designed by <a id="instalink" href="https://www.instagram.com/_master.manav_/"
-      target="_blank">Master Manav</a></footer>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
     integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
   </script>
@@ -191,6 +193,8 @@
   <script type="text/javascript" src="https://rawcdn.githack.com/mastermanav09/My-Notes/master/index.js"></script>
   <script type="text/javascript" src="https://raw.githack.com/mastermanav09/My-Notes/master/index.js"></script>
 
+  <footer id="footer">Designed by <a id="instalink" href="https://www.instagram.com/_master.manav_/"
+      target="_blank">Master Manav</a></footer>
 </body>
 
 </html>
