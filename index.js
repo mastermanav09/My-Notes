@@ -42,15 +42,26 @@ function shownotes() {
             <button id="${index}" onclick="deletenote(this.id)" class="btn btn-primary del_note">Delete note</button>
             </div>
       </div>`;
+      
     });
 
     let noteselem = document.getElementById("notes");
     if (notesobj.length != 0) {
+
         noteselem.innerHTML = html;
+        
+
     } else {
         noteselem.innerHTML = `<div id="add_notes__ind">Nothing to show! Use <a id="logo1">'Add your note here'</a> section to add notes.</div>`;
+
+        foot = document.getElementById('footer')
     }
+    
+
+
 }
+
+
 
 // //To highlighten
 // let logo = document.getElementById('logo1');
@@ -98,9 +109,14 @@ search.addEventListener("input", function () {
             element.style.display = "block";
         } else {
             element.style.display = "none";
+
         }
+
     });
+
 });
+
+
 
 /*
 Further features coming soon
