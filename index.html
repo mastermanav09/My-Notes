@@ -29,11 +29,15 @@
 
     .add_notecard {
       width: 80%;
+      
+     
     }
 
     #add_btn {
       background-color: purple;
       border-color: purple;
+      display: block;
+      margin: auto;
     }
 
     .del_note {
@@ -78,12 +82,13 @@
 
     #add_notes__ind {
       font-size: 2rem;
-      color: rgb(13, 174, 238);
+      color: rgb(13, 174, 238); 
     }
 
     #footer {
-      height: 3.4rem;
+      height: 3rem;
       background-color: darkviolet;
+      font-size: 1rem;
       color: white;
       position: fixed;
       width: 100%;
@@ -112,6 +117,13 @@
     body {
       background-size: 100% 100%;
       background-attachment: fixed;
+      /* background-color:#123 */
+    }
+    
+    #deldiv
+    {
+      display: grid;
+      place-items: center center;
     }
   </style>
 </head>
@@ -119,9 +131,8 @@
 <body
   background="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80">
 
-  <div id="content">
 
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md" >
       <div class="container-fluid">
         <a class="navbar-brand mb-sm-1 fonc" href="#">My Notes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -148,19 +159,36 @@
     <div class="container my-3">
       <h2 align="center">Welcome to <span class=" bg-dark py-1 px-2 text-white">My Notes</span></h2>
 
-      <div align="center">
-        <div class="card add_notecard my-4" id="notebox">
-
+      
+      
+      
+      
+      <div class="row d-flex flex-row">
+        
+        <div class="card add_notecard my-4 col-lg-9" id="notebox">
+          
           <div class="card-body">
             <h4 class="card-title">Add your note here :</h4>
             <div class="mb-3">
-              <textarea class="form-control" id="AddTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="AddTextarea1" rows="5"></textarea>
+            
             </div>
-            <button href="#" class="btn btn-primary" id="add_btn">Add this Note</button>
+            <button  href="#" class="btn btn-primary" id="add_btn">Add this Note</button>
           </div>
+          
         </div>
+        
+        
+        <div class="col-lg-2" id="deldiv">
+          <button class="btn btn-danger" onclick="deleteAll()">Delete all</button>
+        </div>
+      
       </div>
 
+      
+      
+      
+      
       <hr>
 
       <i>
@@ -169,21 +197,19 @@
 
       <hr>
 
-      <div class="container-fluid row m-4" id="notes">
-
-        <div class="card col-lg-3 m-3 notecard" style="width: 17rem;">
+      <div class="container-fluid row" id="notes">
+        <div class="card col-lg-4 col-xs-10 m-3 notecard" style="width: 24rem;">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text"></p>
             <a href="#" class="btn btn-primary del_note">Delete note</a>
           </div>
         </div>
-
       </div>
 
+      
     </div>
 
-  </div>
 
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"

@@ -3,7 +3,7 @@ shownotes();
 // add the note contents to local storage
 
 let addbtn = document.getElementById("add_btn");
-let footer = document.getElementById('footer')
+// footer = document.getElementById('footer')
 
 addbtn.addEventListener("click", function (e) {
     let addtext = document.getElementById("AddTextarea1");
@@ -36,7 +36,7 @@ function shownotes() {
     let html = "";
     notesobj.forEach(function (element, index) {
         html += `
-        <div class="card col-lg-3 m-3 notecard" style="width: 17rem;">
+        <div class="card col-lg-4 col-xs-10 m-3 mb-5 notecard" style="width: 24rem;">
             <div class="card-body">
             <h5 class="card-title">Note ${index + 1}</h5>
             <p class="card-text">${element}</p>
@@ -96,8 +96,31 @@ function deletenote(index) {
     shownotes();
 }
 
-let search = document.getElementById("search_txt");
 
+// delete all function
+function deleteAll()
+{
+    let bool = confirm('Are you sure you want to delete all your notes ?')
+    
+    if (bool)
+    {
+        notesobj=[];
+        localStorage.setItem('notes',JSON.stringify(notesobj));
+    }
+    
+    else {}
+    shownotes();
+}
+
+
+
+
+
+
+
+
+// To search a particular note
+let search = document.getElementById("search_txt");
 search.addEventListener("input", function () {
     let inputVal = search.value.toLowerCase();
 
@@ -116,9 +139,23 @@ search.addEventListener("input", function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 Further features coming soon
 1) Add Title feature
 2) Mark your note as important
-3) delete all option
-*/
+3) delete all option           (Added)
+*/ 
