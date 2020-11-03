@@ -112,13 +112,6 @@ function deleteAll()
     shownotes();
 }
 
-
-
-
-
-
-
-
 // To search a particular note
 let search = document.getElementById("search_txt");
 search.addEventListener("input", function () {
@@ -136,19 +129,6 @@ search.addEventListener("input", function () {
     });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
