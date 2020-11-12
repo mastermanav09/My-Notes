@@ -6,15 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>My Notes</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
     integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
   <style type="text/css">
+    html {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav-link {
+      margin-top: 0.1rem;
+      margin-left: 0.2rem;
+    }
+
     .navbar-brand {
-      font-size: 1.55rem;
+      font-size: 1.75rem;
+      margin-top: 0.4rem;
+      margin-left: 0.4rem;
+      font-family: Georgia;
+
     }
 
     .navbar {
-      background-color: rgba(146, 38, 218, 0.6);
+      background-color: rgba(146, 38, 218, 0.5);
     }
 
     .fonc {
@@ -36,6 +51,7 @@
       border-color: purple;
       display: block;
       margin: auto;
+      padding-bottom: 0.3rem;
     }
 
     .del_note {
@@ -78,17 +94,33 @@
       padding: 0.5rem;
     }
 
-
-    #logo1 {
+    #add_notes__ind {
+      font-size: 2rem;
       font-weight: bold;
-      text-decoration: none;
-      color: blueviolet;
+      font-variant: small-caps;
+      background: linear-gradient(to right, #dd14e2 20%, #83f737 40%, #83f737 60%, #dd14e2 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 210% auto;
+      animation: textShine 4s linear infinite;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      background: linear-gradient(to right, #dd14e2 20%, #83f737 40%, #83f737 60%, #dd14e2 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: textShine 4s linear infinite;
 
     }
 
-    #add_notes__ind {
-      font-size: 2rem;
-      color: rgb(13, 174, 238);
+    @keyframes textShine {
+      100% {
+        background-position: 200% center;
+      }
     }
 
     #footer {
@@ -111,6 +143,7 @@
     body {
 
       background-attachment: fixed;
+      background-size: 100% 100%;
       /* background-color:#123 */
     }
 
@@ -123,6 +156,15 @@
       margin: 0.3rem;
       margin-right: 0.5rem;
     }
+
+    #addTitle,
+    #AddTextarea1 {
+      resize: none;
+    }
+
+    #headingtitle {
+      color: linear-gradient(to right, #dd14e2 20%, #83f737 40%, #83f737 60%, #dd14e2 80%);
+    }
   </style>
 </head>
 
@@ -132,14 +174,17 @@
 
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
-      <a class="navbar-brand mb-sm-1 fonc" href="#">My Notes</a>
+      <div class="d-flex justify-content-around">
+        <img src="https://img.icons8.com/nolan/64/task.png" />
+        <a class="navbar-brand mb-sm-1 fonc" href="#">My Notes</a>
+      </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item mb-sm-2 ml-sm-1 mb-lg-0">
+          <li class="nav-item mb-sm-2 ml-sm-1 mt-lg-2">
             <a class="nav-link active fonc" href="#">Home</a>
           </li>
         </ul>
@@ -155,15 +200,15 @@
 
 
   <div class="container my-3">
-    <h2 align="center">Welcome to <span class=" bg-dark py-1 px-2 text-white">My Notes</span></h2>
+    <h2 align="center" id="headingtitle">Welcome to <span class=" bg-dark py-1 px-2 text-white">My Notes</span></h2>
 
 
 
 
 
-    <div class="row ">
+    <div class="row">
 
-      <div class="card add_notecard my-4 col-lg-9" id="notebox">
+      <div class="card add_notecard my-4 col-lg-9 d-block m-auto" id="notebox">
 
         <div class="mr-4 mt-4 m-3" id="card-subtitle">
           <h4>Add Title : </h4>
@@ -183,7 +228,7 @@
 
 
       <div class="col-lg-2" id="deldiv">
-        <button class="btn btn-danger" onclick="deleteAll()">Delete all</button>
+        <button class="btn btn-danger" onclick="deleteAll()">Delete all <i class="fas fa-trash ml-1"></i></button>
       </div>
 
     </div>

@@ -69,7 +69,7 @@ function shownotes() {
   if (notesobj.length != 0) {
     noteselem.innerHTML = html;
   } else {
-    noteselem.innerHTML = `<div id="add_notes__ind">Nothing to show! Use <a id="logo1" >'Add your note here'</a> section to add notes.</div>`;
+    noteselem.innerHTML = `<div id="add_notes__ind">Nothing to show! Use 'Add your note here' section to add notes.</div>`;
 
     foot = document.getElementById("footer");
   }
